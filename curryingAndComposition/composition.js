@@ -1,4 +1,5 @@
-// Composition - Function composition is the pointwise application of one function to the result of another. Developers do it in a manual manner every day when they nest functions
+// Composition - Function composition is the pointwise application of one function to the result of another.
+ // Developers do it in a manual manner every day when they nest functions
 // lets say I want to perform 2 tasks one after another
 
 function add(a, b) {
