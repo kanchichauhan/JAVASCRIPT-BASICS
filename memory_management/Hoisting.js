@@ -54,3 +54,6 @@ arrow function behaves as a variable, it gives undefined to getName
 Hoisting explained
 undefined
 */
+
+// EXAMPLE 4
+

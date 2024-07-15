@@ -62,7 +62,7 @@ bf1Object.gfFunction(1, 2) // clearly she is with her first bf then she will ass
 
 bf1Object.gfFunction.call(bf2Object, 1, 2); // call methood allowed to have a second boyfriend so in that case now her boyfriend is bf2Object
 // Apply is syntactical sugar over call, so this method passes other args in an array
-bf1Object.gfFunction.call(bf2Object, [1, 2]); // apply methood allowed to have a second boyfriend so in that case now her boyfriend is bf2Object
+bf1Object.gfFunction.apply(bf2Object, [1, 2]); // apply methood allowed to have a second boyfriend so in that case now her boyfriend is bf2Object
 
 
 //  THIS IS OBVIOUSLY NOT GOOD SO pARENTS DECIDED TO MARRY THEIR
