@@ -1,8 +1,14 @@
 const piyush = {
+    name: 'piyush chauhan',
+    sayName: function () {
+        console.log(this.name);
+    },
+};
+const kanchi = {
     name: 'Kanchi chauhan',
     sayName: function () {
         console.log(this.name);
     },
 };
 
-setTimeout(piyush.sayName.bind(piyush), 3*1000);
+setTimeout(kanchi.sayName.bind(piyush), 3*1000); // piyush chauhan

@@ -1,4 +1,4 @@
-
+console.log('running')
 // DEBOUNCING
 /*Debouncing is used to ensure that a function doesn't fire repeatedly as long as an event continues to occur.
 It limits the rate at which a function is executed. This is particularly useful for events that can fire many

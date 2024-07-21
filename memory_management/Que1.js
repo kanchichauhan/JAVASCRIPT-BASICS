@@ -8,4 +8,4 @@ console.log(age)
 undefined
 20
 
-//the memory is assigned to age with undefined value & then after assigning the value it gives 10
+//the memory is assigned to age with undefined value & then after assigning the value it gives 20

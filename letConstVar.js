@@ -19,7 +19,7 @@ console.log(age2); // 20
 /* Variables declared with const are hoisted to the top of their scope like let, but unlike var, they are not initialized with undefined. Instead, they remain uninitialized until their declaration statement is executed.
 Accessing a const variable before its declaration statement reaches in the code will throw a ReferenceError. */
 
-console.log(age3); // undefined
+console.log(age3); // reference error
 let age3 = 20;
 console.log(age3); // 20
 

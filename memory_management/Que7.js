@@ -21,7 +21,7 @@ var obj = {
     })(),
 };
 
-console.log(obj.prop.getFullName());
-console.log(obj.getFullname());
-console.log(obj.getFullNameV2());
+console.log(obj.prop.getFullName()); //inside prop
+console.log(obj.getFullname()); //hacked full name
+console.log(obj.getFullNameV2()); // hacked full name
 console.log(obj.getFullNameV3); // not a function, its a property

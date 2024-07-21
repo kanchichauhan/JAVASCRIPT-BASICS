@@ -19,6 +19,3 @@ document.querySelector('.parent').addEventListener('click', ({target}) => {
 // With this code, when you click the button, the event bubbles up to the div which handles the event.
 // Event Delegation is a useful pattern that allows you to write cleaner code, and create fewer event listeners with similar logic.
 
-/* ---------- EVENT LOOP ------------ */
-
-/* ---------- EVENT CAPTURING --------- */

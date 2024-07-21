@@ -1,6 +1,8 @@
 // Currying = Multiple closures
-// Currying => It is a technique in functional programming, that transforms the function of multiple arguments into several functions of a single argument in sequence. 
-// lets say we want to pass 3 args into a function, & there is a case where even if one of the args is missing it should not work
+/* Currying => It is a technique in functional programming, that transforms the
+        function of multiple arguments into several functions of a single argument in sequence. */
+/* lets say we want to pass 3 args into a function, & there is a case where even if one of the args
+        is missing it should not work*/
 
 function add(a, b, c) {
     return a+b+c
