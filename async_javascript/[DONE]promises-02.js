@@ -6,7 +6,8 @@
             .then(function (orderId) {
                 console.log(orderId)
             })
-            /* => if i will put the catch after first check then it oncly check the first one & will not block the execution of other promises :)
+            /* => if i will put the catch after first check then it oncly check the first one
+            & will not block the execution of other promises :)
             .catch(function (err) { // will handle any error in the chain
                 console.log(err.message);
             })

@@ -10,6 +10,56 @@
     4. In a function, in strict mode, this is undefined.
     5. In an event, this refers to the element that received the event.
     6. Methods like call(), apply(), and bind() can refer this to any object.
+
+CALL =>  an object can use a method belonging to another object.
+    const person = {
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+    const person1 = {
+        firstName:"John",
+        lastName: "Doe"
+    }
+    const person2 = {
+        firstName:"Mary",
+        lastName: "Doe"
+    }
+
+    // This will return "John Doe":
+    person.fullName.call(person1);
+
+APPLY => same as call, method takes arguments as an array.
+
+    const person = {
+    fullName: function(city, country) {
+        return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+    }
+
+    const person1 = {
+        firstName:"John",
+        lastName: "Doe"
+    }
+
+    person.fullName.apply(person1, ["Oslo", "Norway"]);
+
+BIND (Function Borrowing) => an object can borrow a method from another object
+
+    const person = {
+        firstName:"John",
+        lastName: "Doe",
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+
+    const member = {
+        firstName:"Hege",
+        lastName: "Nilsen",
+    }
+
+    let fullName = person.fullName.bind(member);
 */
 
 

@@ -1,43 +1,79 @@
 // ************** Object Methods **************** //
 
-// Copies properties from a source object to a target object
-Object.assign(target, source)
+// Object.assign(target, source) = Copies properties from a source object to a target object
 
-// Creates an object from an existing object
-Object.create(object)
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, b: 4};
 
-// Returns an array of the key/value pairs of an object
-Object.entries(object)
+const obj3 = Object.assign(obj1, obj2);
+console.log(obj3)
 
-// Creates an object from a list of keys/values
-Object.fromEntries()
+// Object.create(object) = creates a new object, using an existing object as the prototype of the newly created object.
+const Obj = {a:1, b: 2};
 
-// Returns an array of the keys of an object
-Object.keys(object)
+const newObj = Object.create(Obj);
+console.log(newObj.a);
 
-// Returns an array of the property values of an object
-Object.values(object)
+// Object.entries(object) = Returns an array of the key/value pairs of an object
 
-// Groups object elements according to a function
-Object.groupBy(object, callback)
+const object1 = {
+    a: 'somestring',
+    b: 42,
+};
+
+console.log(Object.entries(object1))
+
+for (const [key, value] of Object.entries(object1)){
+    console.log(`${key} : ${value}`)
+}
+
+
+// Object.keys(object) = Returns an array of the keys of an object
+
+for (const keys of Object.keys(object1)) {
+    console.log(keys);
+}
+
+// Object.values(object) = Returns an array of the property values of an object
+
+for (const keys of Object.values(object1)) {
+    console.log(keys);
+}
 
 
 // ************** Object Properties **************** //
 
-// Adding or changing an object property
-Object.defineProperty(object, property, descriptor)
+// Object.defineProperty(object, property, descriptor) = Adding or changing an object property
 
-// Adding or changing object properties
-Object.defineProperties(object, descriptors)
+const defineObj = {};
 
-// Accessing a Property
-Object.getOwnPropertyDescriptor(object, property)
+Object.defineProperty(defineObj, 'property1', {
+    value: 42,
+    writable: false
+});
+console.log(defineObj.property1)
 
-// Accessing Properties
-Object.getOwnPropertyDescriptors(object)
+// Object.defineProperties(object, descriptors) = Adding or changing object properties
 
-// Returns all properties as an array
-Object.getOwnPropertyNames(object)
+Object.defineProperties(defineObj, {
+    prop1: {
+        value: {
+            a: 1,
+            b: 2
+        }
+    },
+    prop2: {
+        value: 12
+    }
+});
+console.log(defineObj.prop1)
 
-// Accessing the prototype
-Object.getPrototypeOf(object)
+// Object.getOwnPropertyNames(object) = Returns all properties as an array
+
+const objct = {
+    a: 1,
+    b: 2,
+    c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(objct));

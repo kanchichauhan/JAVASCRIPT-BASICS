@@ -1,20 +1,16 @@
 /*
     ************** PROTOTYPES ************
 
-    In JavaScript, prototypes allow properties and methods to be shared among instances of the function or object. 
+    Inheritance and the prototype chain
 
-    - Add a Property to the Prototype
-    - Add a Method to the Prototype
+    In programming, inheritance refers to passing down characteristics from a parent to a child
+    so that a new piece of code can reuse and build upon the features of an existing one.
 
-    ********** Prototype Inheritance ********
+    JavaScript implements inheritance by using objects. Each object has an internal link to another
+    object called its prototype. That prototype object has a prototype of its own, and so on until
+    an object is reached with null as its prototype.
 
-    Properties or methods added to the prototype of a constructor function are accessible to all objects
-    derived from it. For example,
-
-    ******* JavaScript Prototype Chaining *****
-
-    JavaScript always searches for properties in the objects of the constructor
-    function first. Then, it searches in the prototype.
+    By definition, null has no prototype and acts as the final link in this prototype chain.
 */
 
 // Inheritance
@@ -60,3 +56,11 @@ const c3 = new Car1();
 
 console.log(`The car's color is ${c3.color}.`); 
 console.log(`The car has ${c3.wheels} wheels.`);
+
+/*
+The difference between `__proto__` and `prototype` is simple: `__proto__` is
+a property of an object instance, while `prototype` is a property of a constructor function.
+When you use `__proto__`, you're looking up properties and methods on an object's
+prototype chain. On the other hand, `prototype` defines the shared properties and methods
+that all instances created from a constructor function will have.
+*/
