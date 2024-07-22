@@ -13,8 +13,8 @@
 
 CALL =>  an object can use a method belonging to another object.
     const person = {
-        fullName: function() {
-            return this.firstName + " " + this.lastName;
+        fullName: function(city, country) {
+        return this.firstName + " " + this.lastName + "live in city" + city + "and" + country;
         }
     }
     const person1 = {
@@ -27,7 +27,7 @@ CALL =>  an object can use a method belonging to another object.
     }
 
     // This will return "John Doe":
-    person.fullName.call(person1);
+    person.fullName.call(person1, 'agra', 'india');
 
 APPLY => same as call, method takes arguments as an array.
 
@@ -45,6 +45,10 @@ APPLY => same as call, method takes arguments as an array.
     person.fullName.apply(person1, ["Oslo", "Norway"]);
 
 BIND (Function Borrowing) => an object can borrow a method from another object
+1. You can create a reusable function (returningFn) with a fixed this context (person1 in this case)
+    without immediately invoking it.
+2. Useful when you want to create a function that you can call later with a predefined context.
+
 
     const person = {
         firstName:"John",
@@ -60,6 +64,18 @@ BIND (Function Borrowing) => an object can borrow a method from another object
     }
 
     let fullName = person.fullName.bind(member);
+
+
+Use bind:
+
+When you want to create a new function with a specific this context and potentially pre-set arguments.
+When you want to pass around a function with a bound context for later invocation.
+
+Use call or apply:
+
+When you need to immediately invoke a function with a specific this context and arguments that are already
+available in separate values (call) or an array (apply).
+
 */
 
 

@@ -1,6 +1,6 @@
 /*
     This means that micro-tasks, like promises and mutation observations, are given priority
-    over regular callback tasks. Even if both queues have tasks waiting, the event loop will
+    over regular callback queue tasks. Even if both queues have tasks waiting, the event loop will
     always finish processing all micro-tasks before it starts working on tasks from the Callback Queue.
 
     Understanding Task Starvation:

@@ -67,3 +67,19 @@
         console.log(err.message);
     });
 
+
+    const promise = new Promise((res, rej) => {
+        setTimeout(() => {
+            rej('resolved')
+        }, 2000)
+    });
+    promise.then((res) => console.log(res))
+    .then(() => console.log('everything done1'))
+    .then(() => console.log('everything done2'))
+    .catch((err) => console.log('reject', err))
+    // method with promises. The finally() method gets executed when the promise is either resolved successfully or rejected. For example,
+    .finally(       
+        function greet() {
+            console.log('This code is executed.');
+        }
+    );

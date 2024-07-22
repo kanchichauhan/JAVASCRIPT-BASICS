@@ -1,5 +1,7 @@
 /* BASIC CLOSURE SYNTAX
     - function along with its lexical scope forma a closure
+    a function that has access to the variables in its parent scope, even after the parent function has completed execution.
+    This allows for data to be "closed over" or remembered by the inner function, even after the outer function has returned.
 */
 
 // function x() {

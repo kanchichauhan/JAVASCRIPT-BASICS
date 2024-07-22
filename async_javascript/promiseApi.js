@@ -1,12 +1,12 @@
 /* parallel API calls 
-    Promise.all([p1, p2, p3])
-    Promise.allSettled([p1, p2, p3])
-    Promise.race([p1, p2, p3])
-    Promise.any([p1, p2, p3])
+    Promise.all([p1, p2, p3]) - waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, it becomes the error of Promise.all, and all other results are ignored.
+    Promise.allSettled([p1, p2, p3]) -  waits for all promises to settle and returns their results as an array of objects with:
+    Promise.race([p1, p2, p3]) -  waits only for the first settled promise and gets its result (or error).
+    Promise.any([p1, p2, p3]) -  waits for the first promise to fulfill, and its result becomes the outcome. If all of the given promises are rejected, AggregateError becomes the error of Promise.any.
 
     Settled => got the result either rejected or resolved
     Fulfilled/Success => the promise is successfully fulfilled
-    Aggregate error => when all the errors has been rejected it will return the array of errors
+    Aggregate error => when all the promises has been rejected it will return the array of errors
 */
 
 const p1 = new Promise((resolve, reject) => {
