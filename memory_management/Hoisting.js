@@ -1,4 +1,6 @@
-/* Hoisting => is a phenomenon in JS by which you can access the variables and functions even before initialising/declaring it
+/* Hoisting => a concept or behavior in JavaScript where the declaration of a function, variable, or class goes to the top of the scope they were defined in.
+    
+    is a phenomenon in JS by which you can access the variables and functions even before initialising/declaring it
     even before the code starts executing the memory is allocated to each and every variable and function that's why it won't give error
 */
 

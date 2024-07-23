@@ -30,7 +30,7 @@ Car.prototype.color = "Red";
 Car.prototype.drive = function() {
     console.log(`Driving ${this.model}`);
 };
-
+ 
 // display added property using c1 and c2 objects
 console.log(`${c1.model} color: ${c1.color}`);  
 console.log(`${c2.model} color: ${c2.color}`);  
